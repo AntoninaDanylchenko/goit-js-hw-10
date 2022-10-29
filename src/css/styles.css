@@ -18,3 +18,21 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+.flags-img {
+  width: 75px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.flags-container {
+  display: flex;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+li:not(:last-child) {
+  margin-bottom: 15px;
+}
