@@ -38,14 +38,14 @@ function renderContriesCard(country) {
       return `
                 <div class='flags-container'><img class="flags-img" src=${
                   flags.svg
-                } alt=${name.official} width = "100" />
+                } alt=${name.official} width = "70" height = "auto" />
                     <h1>${name.official}</h1>
                 </div>
                 <div class='info-container'>
                     <ul class='info-list'>
-                        <li>Capital: ${capital}</li>
-                        <li>Population: ${population}</li>
-                        <li>Languages: ${Object.values(languages)}</li>
+                        <li><b>Capital:</b> ${capital}</li>
+                        <li><b>Population:</b> ${population}</li>
+                        <li><b>Languages:</b> ${Object.values(languages)}</li>
                     </ul>
                 </div>`;
     })
@@ -58,7 +58,7 @@ function renderContriesList(country) {
   return country
     .map(({ flags, name }) => {
       return `
-                <li class='flags-container'><img class="flags-img" src=${flags.svg} alt=${name.official} width = "75" />
+                <li class='flags-container'><img class="flags-img" src=${flags.svg} alt=${name.official} width = "70" height = "auto" />
                     ${name.official}
                 <li>`;
     })
