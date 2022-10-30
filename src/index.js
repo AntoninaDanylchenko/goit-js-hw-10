@@ -51,9 +51,7 @@ function renderContriesCard(country) {
     })
     .join('');
 }
-// function parsStroke(arr) {
-//   return (...arr);
-// }
+
 function renderContriesList(country) {
   return country
     .map(({ flags, name }) => {
@@ -71,7 +69,6 @@ function processingsObjectCountries(countries) {
       arrayDatasCountries.push(country);
     }
   });
-  console.log(arrayDatasCountries);
   removeEl();
   if (arrayDatasCountries.length > 10) {
     Notify.info('Too many matches found. Please enter a more specific name.');
