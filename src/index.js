@@ -36,24 +36,29 @@ function renderContriesCard(country) {
   return country
     .map(({ flags, name, capital, population, languages }) => {
       return `
-                <div class='flags-container'><img class="flags-img" src=${flags.svg} alt=${name.official} />
+                <div class='flags-container'><img class="flags-img" src=${
+                  flags.svg
+                } alt=${name.official} width = "100" />
                     <h1>${name.official}</h1>
                 </div>
                 <div class='info-container'>
                     <ul class='info-list'>
                         <li>Capital: ${capital}</li>
                         <li>Population: ${population}</li>
-                        <li>Languages: ${languages}</li>
+                        <li>Languages: ${Object.values(languages)}</li>
                     </ul>
                 </div>`;
     })
     .join('');
 }
+// function parsStroke(arr) {
+//   return (...arr);
+// }
 function renderContriesList(country) {
   return country
     .map(({ flags, name }) => {
       return `
-                <li class='flags-container'><img class="flags-img" src=${flags.svg} alt=${name.official} />
+                <li class='flags-container'><img class="flags-img" src=${flags.svg} alt=${name.official} width = "75" />
                     ${name.official}
                 <li>`;
     })

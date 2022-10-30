@@ -20,13 +20,13 @@ body {
 }
 
 .flags-img {
-  width: 75px;
-  height: auto;
   margin-right: 15px;
+  display: block;
 }
 
 .flags-container {
   display: flex;
+  margin-bottom: 10px;
 }
 ul {
   margin: 0;
