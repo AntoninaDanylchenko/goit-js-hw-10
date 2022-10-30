@@ -21,7 +21,7 @@ refs.inputEl.addEventListener(
 function onInputSearchCountries(e) {
   arrayDatasCountries.length = 0;
 
-  searchCountry = e.target.value.toLowerCase().trim();
+  searchCountry = e.target.value.trim();
   if (!searchCountry) {
     removeEl();
     return;
@@ -65,7 +65,9 @@ function renderContriesList(country) {
 
 function processingsObjectCountries(countries) {
   countries.map(country => {
-    if (country.name.common.toLowerCase().includes(searchCountry)) {
+    if (
+      country.name.common.toLowerCase().includes(searchCountry.toLowerCase())
+    ) {
       arrayDatasCountries.push(country);
     }
   });
